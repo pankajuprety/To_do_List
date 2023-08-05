@@ -1,0 +1,29 @@
+{% extends 'base/main.html' %}
+{% block content%}
+<a href="{% url 'tasks'%}"><i class="fa-solid fa-arrow-left fa-2xl"></i></a>
+<h1>Register</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    <label>{{form.username.label}}</label>
+    <br>
+    {{form.username}}
+    <br>
+
+    <label>{{form.password1.label}}</label>
+    <br>
+    {{form.password1}}
+    <br>
+
+    <label>{{form.password2.label}}</label>
+    <br>
+    {{form.password2}}
+    <br>
+    <input type="submit" class="button" value="Register"/>
+
+</form>
+
+<p>If you have an account? <a href="{% url 'login'%}">Login</a></p>
+{% endblock %}
+
+

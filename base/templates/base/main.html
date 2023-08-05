@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>To Do Items</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            background-color:cornsilk;
+            font-family: 'Playfair Display', serif;
+            padding-top: 50px;
+        }
+        
+        .container {
+            max-width: 550px;
+            margin:auto;
+            background-color:aliceblue;
+            box-shadow: 10px 10px 5px 12px lightblue;
+
+        }
+        .header-bar {
+            padding: 5px;
+            text-align: left;
+            background: #1abc9c;
+            color: white;
+            font-size: 14px;
+            }
+
+        .header-bar a{
+            color: black;
+            top: 100px;
+            text-decoration: none;
+        }
+
+        .task-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color:seashell;
+            border-top: 1px solid darkgrey;
+        }
+
+        .task-title {
+            display: flex;
+        }
+
+        .task-title a {
+            text-decoration: none;
+            color: dimgray;
+            margin-left: 10px;
+        }
+
+        .task-complete-icon {
+            height: 20px;
+            width: 20px;
+            background-color: rgb(105, 192, 105);
+            border-radius: 50%;
+        }
+
+        .task-incomplete-icon {
+            height: 20px;
+            width: 20px;
+            background-color: rgb(218, 218, 218);
+            border-radius: 50%;
+        }
+
+        .delete-link {
+            text-decoration: none;
+            font-weight: 900;
+            color: red;
+            font-size: 22px;
+            line-height: 0;
+        }
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 22px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            }
+
+            input[type=text],
+            input[type=password],
+            select {
+                width: 50%;
+                padding: 10px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+                }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        {% block content %}
+
+        {% endblock content %}
+
+    </div>
+    
+</body>
+</html>
